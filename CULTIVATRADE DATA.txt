@@ -1,0 +1,164 @@
+USE [Cultivatrade]
+GO
+INSERT [dbo].[User] ([UserId], [Firstname], [Lastname], [Phone], [Email], [Password], [Address], [ProfileImage], [BusinessPermitNumber], [BusinessPermitImage], [SanitaryPermitImage], [IsSeller], [IsApproved], [DateTimeCreated], [DateTimeCreatedAsSeller], [VerificationCode], [FarmName], [FarmAddress], [FarmDescription]) VALUES (N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'Karl', N'Delfin', N'09499690998', N'dkhrl2000@gmail.com', N'$2a$11$SuyRLFo6dOV/JCiqQge/zuEtuI62MKFSF3VlavHRJPIY8bIRRVA.i', N'37 - C. Alopez st. barangay calamba, cebu city', N'e93c37cd-0975-4ff7-9770-3168b33c42b5.png', NULL, N'e93c37cd-0975-4ff7-9770-3168b33c42b5.png', NULL, 1, 0, CAST(N'2024-09-29T08:30:59.353' AS DateTime), NULL, 4970, N'dsd', N'sds', N'sds')
+GO
+INSERT [dbo].[User] ([UserId], [Firstname], [Lastname], [Phone], [Email], [Password], [Address], [ProfileImage], [BusinessPermitNumber], [BusinessPermitImage], [SanitaryPermitImage], [IsSeller], [IsApproved], [DateTimeCreated], [DateTimeCreatedAsSeller], [VerificationCode], [FarmName], [FarmAddress], [FarmDescription]) VALUES (N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Myrene', N'Camingawan', N'09815695459', N'yencamingawan@gmail.com', N'$2a$11$PP.WE/ca90DGn9qRk1H4aOIgiS.POWd19yF/UY1y3FK0nie8ImAR6', N'Upper Riverside Inayawan, Cebu City', N'798b26b3-6099-4b0c-8987-7f839d36302a.png', NULL, N'798b26b3-6099-4b0c-8987-7f839d36302a.jpg', NULL, 1, 1, CAST(N'2024-10-21T21:14:13.580' AS DateTime), NULL, 3159, N'Yen Farm', N'Inayawan Public Market', N'Yen Description')
+GO
+INSERT [dbo].[User] ([UserId], [Firstname], [Lastname], [Phone], [Email], [Password], [Address], [ProfileImage], [BusinessPermitNumber], [BusinessPermitImage], [SanitaryPermitImage], [IsSeller], [IsApproved], [DateTimeCreated], [DateTimeCreatedAsSeller], [VerificationCode], [FarmName], [FarmAddress], [FarmDescription]) VALUES (N'5ea5a485-eeee-425b-a78f-9d4551dbd130', N'Karl', N'karl', N'09123213213', N'dkhrl2001@gmail.com', N'$2a$11$GdH9TQO6wGVWR//FPCn8/ujQVl8BI/rTF98RI6QsbfZcdDtiJn662', N'123123213', N'5ea5a485-eeee-425b-a78f-9d4551dbd130.jpg', NULL, NULL, NULL, 0, 0, CAST(N'2024-11-10T10:02:45.770' AS DateTime), NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[User] ([UserId], [Firstname], [Lastname], [Phone], [Email], [Password], [Address], [ProfileImage], [BusinessPermitNumber], [BusinessPermitImage], [SanitaryPermitImage], [IsSeller], [IsApproved], [DateTimeCreated], [DateTimeCreatedAsSeller], [VerificationCode], [FarmName], [FarmAddress], [FarmDescription]) VALUES (N'a1fb421a-1946-4f65-b340-c81d3720eaf9', N'Okra', N'Okra', N'09123412213', N'sample@gmail.com', N'$2a$11$He0k/rEg8gbOoO3iY8dVhepRctZ3fSXRu9mLsEeN3ssJpDwIKONSi', N'again', N'a1fb421a-1946-4f65-b340-c81d3720eaf9.png', NULL, NULL, NULL, 0, 0, CAST(N'2024-10-22T21:21:53.250' AS DateTime), NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[UserAddress] ([UserAddressId], [UserId], [Address], [DateTimeCreated], [IsDeleted]) VALUES (N'f6d0086a-15d4-417b-b86d-1c4d9867d8ee', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'Hello!', CAST(N'2024-11-23T08:23:09.090' AS DateTime), 0)
+GO
+INSERT [dbo].[UserAddress] ([UserAddressId], [UserId], [Address], [DateTimeCreated], [IsDeleted]) VALUES (N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'37 - C. Alopez st. barangay calamba, cebu city', CAST(N'2024-11-23T00:00:00.000' AS DateTime), 0)
+GO
+INSERT [dbo].[Message] ([MessageId], [BuyerId], [SellerId], [Message], [DateTimeCreated]) VALUES (N'530562aa-b8a4-4ee4-8368-7c8319ea2435', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Hello my', CAST(N'2024-11-25T12:41:12.053' AS DateTime))
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'338ffa60-e2af-4c9b-9765-0033a109dc54', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'Okrazzz', N'This is okrasss', 20, 0, CAST(N'2024-10-30T16:00:00.000' AS DateTime), N'Fruits', CAST(N'2024-10-19T16:15:06.160' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'f855c89b-74b4-4cfc-b31e-0345d7306849', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'OKra', N'Okra', 20, 10, CAST(N'2024-10-30T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-22T21:29:47.447' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'ee7be5af-39fe-404f-b685-097ac1af06b8', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Okra', N'This is okra', 20, 4, CAST(N'2024-10-31T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-23T16:27:01.123' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'f04e4211-a8ca-46d8-857c-1def1a686a91', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Bombai', N'Bombai', 10, 10, CAST(N'2024-11-30T00:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-11-23T11:07:29.700' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'33f48f28-b51b-4202-a2fe-1edc24aa53b0', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Talong', N'This is talong', 24, 5, CAST(N'2024-10-31T00:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-24T13:35:36.050' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'043b40fc-c856-4fcf-8ec4-2ce97d5d2a93', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'Okra again', N'This is Okra', 30, 5, CAST(N'2024-12-12T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-21T07:29:58.537' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'1c238561-ef87-4937-9c94-37c2c3a662d8', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Okra', N'This is okra', 20, 4, CAST(N'2024-10-31T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-23T16:26:55.193' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Bombay', N'This is bombay', 20, 4, CAST(N'2024-11-30T00:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-11-13T17:49:40.897' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'f5f7c287-c3cb-4295-b7f0-6079395173ef', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Bombay', N'This is bombay', 10, 8, CAST(N'2024-10-31T16:00:00.000' AS DateTime), N'Fruits', CAST(N'2024-10-24T13:31:23.607' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'a8fd464a-8935-4563-8832-775a0459060c', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Okra', N'This is Okra', 20, 5, CAST(N'2024-10-24T16:00:00.000' AS DateTime), N'Fruits', CAST(N'2024-10-22T18:11:45.960' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'34765881-a80c-4280-ab5c-7b0e741256f7', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Carrots', N'This carrots', 10, 20, CAST(N'2024-10-30T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-24T13:29:28.747' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'1c926475-e26b-4ad1-8e93-809ee82292de', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Okra', N'This is okra', 20, 2, CAST(N'2024-10-31T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-23T16:28:08.450' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'db943611-e5be-493c-b8d0-86b368a548bd', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Talong', N'This is talong', 10, 10, CAST(N'2024-10-30T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-24T13:30:11.427' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'529e4cba-1793-4a86-b502-a742f46ef6c9', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'aaa', N'aaa', 12, 5, CAST(N'2024-11-29T00:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-11-25T12:40:20.513' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'1882531c-ea45-46d9-843d-d1275b88e07b', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Okra', N'This is okra', 20, 4, CAST(N'2024-10-31T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-23T16:27:09.953' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'eac0d6b7-ceb0-4104-a971-d5990f70b441', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Okra', N'This is okra', 20, 4, CAST(N'2024-10-31T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-23T16:27:15.273' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'36ad2dbc-b433-442c-9fc3-de3ef5f1686d', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Okra', N'This is okra', 20, 3, CAST(N'2024-10-31T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-23T16:27:05.693' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Product] ([ProductId], [SellerId], [Name], [Description], [Price], [Quantity], [ExpiryDate], [CategoryName], [DateTimeCreated], [IsDeleted], [IsDisabled]) VALUES (N'48f4192b-02fe-430e-8599-feff825dec5d', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'Okra', N'This is okra', 20, 3, CAST(N'2024-10-31T16:00:00.000' AS DateTime), N'Vegetables', CAST(N'2024-10-23T16:26:46.697' AS DateTime), 0, 0)
+GO
+INSERT [dbo].[Cart] ([CartId], [BuyerId], [ProductId], [Quantity], [DateTimeCreated]) VALUES (N'f1230e50-e8c0-40fe-93ba-929ef0f8bf02', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', 2, CAST(N'2024-11-23T09:42:49.737' AS DateTime))
+GO
+INSERT [dbo].[Cart] ([CartId], [BuyerId], [ProductId], [Quantity], [DateTimeCreated]) VALUES (N'236133b7-44dc-4884-b409-a5dc3b02b8a6', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'33f48f28-b51b-4202-a2fe-1edc24aa53b0', 3, CAST(N'2024-11-23T09:44:20.857' AS DateTime))
+GO
+INSERT [dbo].[Feedback] ([FeedbackId], [ProductId], [BuyerId], [Rating], [Message], [DateTimeCreated]) VALUES (N'49972950-21a3-4a6e-9089-1814297d614a', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', 5, N'SUPER GOOD!!!! LAB.AS KEYO!', CAST(N'2024-11-23T19:02:18.573' AS DateTime))
+GO
+INSERT [dbo].[Feedback] ([FeedbackId], [ProductId], [BuyerId], [Rating], [Message], [DateTimeCreated]) VALUES (N'958a0ce3-e05a-4e60-97c5-1dce1bc935a7', N'f5f7c287-c3cb-4295-b7f0-6079395173ef', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', 5, N'asdsaasdsa', CAST(N'2024-11-09T13:52:47.947' AS DateTime))
+GO
+INSERT [dbo].[Feedback] ([FeedbackId], [ProductId], [BuyerId], [Rating], [Message], [DateTimeCreated]) VALUES (N'31883ec5-44ce-48de-9294-f121a58bcb02', N'f5f7c287-c3cb-4295-b7f0-6079395173ef', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', 2, N'asdsadsadas', CAST(N'2024-11-09T13:55:59.867' AS DateTime))
+GO
+INSERT [dbo].[Notification] ([NotificationId], [BuyerId], [UserId], [OrderId], [ProductId], [Message], [DateTimeCreated]) VALUES (N'b40ad515-3002-49fa-ab5c-1651bc9ba375', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'4cf08edf-73e2-4b63-b742-31eee2060b9d', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'Product bought waiting for seller to prepare your order', CAST(N'2024-11-23T09:44:47.410' AS DateTime))
+GO
+INSERT [dbo].[Notification] ([NotificationId], [BuyerId], [UserId], [OrderId], [ProductId], [Message], [DateTimeCreated]) VALUES (N'1ca59b46-934a-4a92-b86f-91bea240d466', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'3a7c12ce-f2ed-4c81-8815-297f6b016a61', N'33f48f28-b51b-4202-a2fe-1edc24aa53b0', N'Product bought waiting for seller to prepare your order', CAST(N'2024-11-23T09:44:47.393' AS DateTime))
+GO
+INSERT [dbo].[Notification] ([NotificationId], [BuyerId], [UserId], [OrderId], [ProductId], [Message], [DateTimeCreated]) VALUES (N'af742d90-8bcc-450c-8b62-9b431bbbf043', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'e477ab08-962b-4d5f-baee-83657658139f', N'1c926475-e26b-4ad1-8e93-809ee82292de', N'Product bought waiting for seller to prepare your order', CAST(N'2024-11-23T09:53:31.510' AS DateTime))
+GO
+INSERT [dbo].[Notification] ([NotificationId], [BuyerId], [UserId], [OrderId], [ProductId], [Message], [DateTimeCreated]) VALUES (N'4700b12b-7fbd-4878-bdca-a29bb510cb2b', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'ecd50490-0e2a-42b7-b96c-3b81589423fa', N'f5f7c287-c3cb-4295-b7f0-6079395173ef', N'Product bought waiting for seller to prepare your order', CAST(N'2024-11-23T09:46:06.720' AS DateTime))
+GO
+INSERT [dbo].[Notification] ([NotificationId], [BuyerId], [UserId], [OrderId], [ProductId], [Message], [DateTimeCreated]) VALUES (N'c94067c6-9423-49ef-91ed-bdcb00f2d901', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'4cf08edf-73e2-4b63-b742-31eee2060b9d', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'Return and Refund', CAST(N'2024-11-23T19:02:05.583' AS DateTime))
+GO
+INSERT [dbo].[Order] ([OrderId], [BuyerId], [SellerId], [ProductId], [QuantityBought], [TotalAmount], [PaymentOption], [OrderDate], [OrderDateReceived], [OrderStatus], [DeliveryAddress], [DeliveryDate], [DeliveryCourier]) VALUES (N'3a7c12ce-f2ed-4c81-8815-297f6b016a61', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'33f48f28-b51b-4202-a2fe-1edc24aa53b0', 3, 72, N'Online payment', CAST(N'2024-11-23T09:44:47.393' AS DateTime), NULL, N'Declined', N'Hello!', NULL, N'')
+GO
+INSERT [dbo].[Order] ([OrderId], [BuyerId], [SellerId], [ProductId], [QuantityBought], [TotalAmount], [PaymentOption], [OrderDate], [OrderDateReceived], [OrderStatus], [DeliveryAddress], [DeliveryDate], [DeliveryCourier]) VALUES (N'4cf08edf-73e2-4b63-b742-31eee2060b9d', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', 2, 40, N'Online payment', CAST(N'2024-11-23T09:44:47.410' AS DateTime), CAST(N'2024-11-23T11:02:05.540' AS DateTime), N'Received', N'Hello!', CAST(N'2024-11-29T00:00:00.000' AS DateTime), N'Shopee Express')
+GO
+INSERT [dbo].[Order] ([OrderId], [BuyerId], [SellerId], [ProductId], [QuantityBought], [TotalAmount], [PaymentOption], [OrderDate], [OrderDateReceived], [OrderStatus], [DeliveryAddress], [DeliveryDate], [DeliveryCourier]) VALUES (N'ecd50490-0e2a-42b7-b96c-3b81589423fa', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'f5f7c287-c3cb-4295-b7f0-6079395173ef', 1, 10, N'Pick up', CAST(N'2024-11-23T09:46:06.683' AS DateTime), NULL, N'Pending', N'Hello!', NULL, NULL)
+GO
+INSERT [dbo].[Order] ([OrderId], [BuyerId], [SellerId], [ProductId], [QuantityBought], [TotalAmount], [PaymentOption], [OrderDate], [OrderDateReceived], [OrderStatus], [DeliveryAddress], [DeliveryDate], [DeliveryCourier]) VALUES (N'e477ab08-962b-4d5f-baee-83657658139f', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'798b26b3-6099-4b0c-8987-7f839d36302a', N'1c926475-e26b-4ad1-8e93-809ee82292de', 2, 40, N'Online payment', CAST(N'2024-11-23T09:53:31.463' AS DateTime), NULL, N'Pending', N'37 - C. Alopez st. barangay calamba, cebu city', NULL, NULL)
+GO
+INSERT [dbo].[Report] ([ReportId], [BuyerId], [ProductId], [Reason], [DateTimeCreated]) VALUES (N'ca778ea6-840b-48e0-b4ac-0995cc94b3b2', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'BAHAW!!!!', CAST(N'2024-11-13T18:48:04.560' AS DateTime))
+GO
+INSERT [dbo].[Report] ([ReportId], [BuyerId], [ProductId], [Reason], [DateTimeCreated]) VALUES (N'c22b5443-2ddd-48d1-948d-7f07f68227bd', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'ATOT REPORT OY!', CAST(N'2024-11-14T20:46:41.363' AS DateTime))
+GO
+INSERT [dbo].[Report] ([ReportId], [BuyerId], [ProductId], [Reason], [DateTimeCreated]) VALUES (N'867ba47e-c525-48f5-b42f-cfd659688c1b', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'asdasdas', CAST(N'2024-11-14T20:09:05.343' AS DateTime))
+GO
+INSERT [dbo].[Report] ([ReportId], [BuyerId], [ProductId], [Reason], [DateTimeCreated]) VALUES (N'ab783a66-5a19-4749-88d1-d1e6b64c7ef3', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'asdasdasasdasd', CAST(N'2024-11-14T20:09:08.380' AS DateTime))
+GO
+INSERT [dbo].[BoostedProduct] ([BoostedProductId], [ProductId], [BoostCost], [NumberOfDays], [DateTimeCreated]) VALUES (N'26647ae0-d6d5-4fed-8d62-4622385eaa0a', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', 100, 1, CAST(N'2024-11-13T18:42:04.773' AS DateTime))
+GO
+INSERT [dbo].[BoostedProduct] ([BoostedProductId], [ProductId], [BoostCost], [NumberOfDays], [DateTimeCreated]) VALUES (N'e0792f17-b686-4e18-a796-80b90b597f15', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', 400, 4, CAST(N'2024-11-13T18:38:35.077' AS DateTime))
+GO
+INSERT [dbo].[BoostedProduct] ([BoostedProductId], [ProductId], [BoostCost], [NumberOfDays], [DateTimeCreated]) VALUES (N'fc7af74a-5332-44d6-8852-c43921159faa', N'f5f7c287-c3cb-4295-b7f0-6079395173ef', 300, 3, CAST(N'2024-11-13T20:43:50.857' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'8d3fb5a5-de63-4bfc-9b3c-14dc23316956', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'8d3fb5a5-de63-4bfc-9b3c-14dc23316956.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot/Images/Products/8d3fb5a5-de63-4bfc-9b3c-14dc23316956.png', CAST(N'2024-11-13T18:06:26.990' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'7e7e418c-d025-4763-8413-32d02c046a5b', N'338ffa60-e2af-4c9b-9765-0033a109dc54', N'7e7e418c-d025-4763-8413-32d02c046a5b.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\7e7e418c-d025-4763-8413-32d02c046a5b.png', CAST(N'2024-10-19T17:10:39.350' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'232bbf19-b0b8-4269-b43b-3b25abe552b4', N'34765881-a80c-4280-ab5c-7b0e741256f7', N'232bbf19-b0b8-4269-b43b-3b25abe552b4.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\232bbf19-b0b8-4269-b43b-3b25abe552b4.png', CAST(N'2024-10-24T13:29:28.913' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'2e4e2f95-314a-460a-b428-4ddb2331370d', N'1882531c-ea45-46d9-843d-d1275b88e07b', N'2e4e2f95-314a-460a-b428-4ddb2331370d.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\2e4e2f95-314a-460a-b428-4ddb2331370d.png', CAST(N'2024-10-23T16:27:09.977' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'3aafeea4-37fc-461d-81fc-520bb7719561', N'f04e4211-a8ca-46d8-857c-1def1a686a91', N'3aafeea4-37fc-461d-81fc-520bb7719561.png', N'C:\Users\Admin\Desktop\New folder\cultivatrade.api\Cultivatrade.Api\wwwroot/Images/Products/3aafeea4-37fc-461d-81fc-520bb7719561.png', CAST(N'2024-11-25T14:35:10.577' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'a47a4a40-d5ee-4b5a-ad46-5978f0d17a59', N'db943611-e5be-493c-b8d0-86b368a548bd', N'a47a4a40-d5ee-4b5a-ad46-5978f0d17a59.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\a47a4a40-d5ee-4b5a-ad46-5978f0d17a59.png', CAST(N'2024-10-24T13:30:11.487' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'bd83cbb8-5e06-4aa6-b1f2-5a1d81d82dde', N'043b40fc-c856-4fcf-8ec4-2ce97d5d2a93', N'bd83cbb8-5e06-4aa6-b1f2-5a1d81d82dde.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\bd83cbb8-5e06-4aa6-b1f2-5a1d81d82dde.png', CAST(N'2024-10-21T07:30:15.000' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'ba064200-c9aa-4a80-918b-5d599f7aa765', N'f5f7c287-c3cb-4295-b7f0-6079395173ef', N'ba064200-c9aa-4a80-918b-5d599f7aa765.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot/Images/Products/ba064200-c9aa-4a80-918b-5d599f7aa765.png', CAST(N'2024-11-10T10:51:21.240' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'e5367bec-03df-443d-9666-60dd55a033fa', N'1c926475-e26b-4ad1-8e93-809ee82292de', N'e5367bec-03df-443d-9666-60dd55a033fa.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\e5367bec-03df-443d-9666-60dd55a033fa.png', CAST(N'2024-10-23T16:28:08.477' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'0e4b464a-09b9-49aa-a08c-6de9f3269807', N'33f48f28-b51b-4202-a2fe-1edc24aa53b0', N'0e4b464a-09b9-49aa-a08c-6de9f3269807.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot/Images/Products/0e4b464a-09b9-49aa-a08c-6de9f3269807.png', CAST(N'2024-11-10T10:54:08.863' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'afc7f228-6b5b-4248-8a15-71b70aabcf12', N'f855c89b-74b4-4cfc-b31e-0345d7306849', N'afc7f228-6b5b-4248-8a15-71b70aabcf12.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\afc7f228-6b5b-4248-8a15-71b70aabcf12.png', CAST(N'2024-10-22T21:29:52.090' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'8052bb12-69fa-4f9c-b615-74a8674dbf22', N'1c238561-ef87-4937-9c94-37c2c3a662d8', N'8052bb12-69fa-4f9c-b615-74a8674dbf22.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\8052bb12-69fa-4f9c-b615-74a8674dbf22.png', CAST(N'2024-10-23T16:26:55.223' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'76f69102-88f7-4692-aebc-80cc99f6a4a6', N'f855c89b-74b4-4cfc-b31e-0345d7306849', N'76f69102-88f7-4692-aebc-80cc99f6a4a6.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\76f69102-88f7-4692-aebc-80cc99f6a4a6.png', CAST(N'2024-10-22T21:29:52.120' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'88c63b63-7748-49a1-855a-84bb2fa48b63', N'529e4cba-1793-4a86-b502-a742f46ef6c9', N'88c63b63-7748-49a1-855a-84bb2fa48b63.png', N'C:\Users\Admin\Desktop\New folder\cultivatrade.api\Cultivatrade.Api\wwwroot/Images/Products/88c63b63-7748-49a1-855a-84bb2fa48b63.png', CAST(N'2024-11-25T12:40:20.947' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'24bc97e5-127b-43e4-82f1-9278d7583c57', N'a8fd464a-8935-4563-8832-775a0459060c', N'24bc97e5-127b-43e4-82f1-9278d7583c57.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\24bc97e5-127b-43e4-82f1-9278d7583c57.png', CAST(N'2024-10-22T18:12:01.123' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'266f7009-f41e-4503-8766-9305cfad4dd8', N'36ad2dbc-b433-442c-9fc3-de3ef5f1686d', N'266f7009-f41e-4503-8766-9305cfad4dd8.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\266f7009-f41e-4503-8766-9305cfad4dd8.png', CAST(N'2024-10-23T16:27:05.723' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'3c71f887-f0cc-4396-9993-952e5a2d3ddb', N'ee7be5af-39fe-404f-b685-097ac1af06b8', N'3c71f887-f0cc-4396-9993-952e5a2d3ddb.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\3c71f887-f0cc-4396-9993-952e5a2d3ddb.png', CAST(N'2024-10-23T16:27:01.157' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'309d81d4-37cc-4fb0-9e26-9e8cf53396c8', N'48f4192b-02fe-430e-8599-feff825dec5d', N'309d81d4-37cc-4fb0-9e26-9e8cf53396c8.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\309d81d4-37cc-4fb0-9e26-9e8cf53396c8.png', CAST(N'2024-10-23T16:26:46.877' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'd0f29442-feda-49c6-afe7-a3f1407ef198', N'6c9205fb-2ba5-4013-83f7-4f9b37c5f5ef', N'd0f29442-feda-49c6-afe7-a3f1407ef198.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot/Images/Products/d0f29442-feda-49c6-afe7-a3f1407ef198.png', CAST(N'2024-11-13T17:49:41.597' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'295a3290-6935-4443-961c-d1728b2c74a2', N'338ffa60-e2af-4c9b-9765-0033a109dc54', N'295a3290-6935-4443-961c-d1728b2c74a2.jpg', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\295a3290-6935-4443-961c-d1728b2c74a2.jpg', CAST(N'2024-10-19T17:11:14.340' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'24b49e96-84d1-4d54-a961-da5cb07d1b8f', N'33f48f28-b51b-4202-a2fe-1edc24aa53b0', N'24b49e96-84d1-4d54-a961-da5cb07d1b8f.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot/Images/Products/24b49e96-84d1-4d54-a961-da5cb07d1b8f.png', CAST(N'2024-11-10T10:50:00.433' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'953deaa8-0591-414a-a6f3-df9ab94dd1c7', N'eac0d6b7-ceb0-4104-a971-d5990f70b441', N'953deaa8-0591-414a-a6f3-df9ab94dd1c7.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\953deaa8-0591-414a-a6f3-df9ab94dd1c7.png', CAST(N'2024-10-23T16:27:15.323' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'b627a511-e296-46bd-a091-e74b068314a1', N'338ffa60-e2af-4c9b-9765-0033a109dc54', N'b627a511-e296-46bd-a091-e74b068314a1.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\b627a511-e296-46bd-a091-e74b068314a1.png', CAST(N'2024-10-19T17:11:14.330' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'69babd9c-48b5-4f48-bf9e-f743bcca3239', N'043b40fc-c856-4fcf-8ec4-2ce97d5d2a93', N'69babd9c-48b5-4f48-bf9e-f743bcca3239.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\69babd9c-48b5-4f48-bf9e-f743bcca3239.png', CAST(N'2024-10-21T07:30:15.017' AS DateTime))
+GO
+INSERT [dbo].[ProductFile] ([ProductFileId], [ProductId], [Image], [ImagePath], [DateTimeCreated]) VALUES (N'f96276ac-093d-4493-884e-ffae7220ccba', N'f5f7c287-c3cb-4295-b7f0-6079395173ef', N'f96276ac-093d-4493-884e-ffae7220ccba.png', N'C:\Users\Admin\Desktop\Cultivatrade\cultivatrade.api\Cultivatrade.Api\wwwroot\Images/Products\f96276ac-093d-4493-884e-ffae7220ccba.png', CAST(N'2024-10-24T13:31:25.587' AS DateTime))
+GO
+INSERT [dbo].[Admin] ([AdminId], [Username], [Password], [DateTimeCreated]) VALUES (N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'admin', N'$2a$11$0NTR9FVP3shUBCSVJ/cIWeoSB5tsadcuFCrUliavoPor3M38HTPa.', CAST(N'2024-09-29T04:39:00.147' AS DateTime))
+GO
+INSERT [dbo].[Payment] ([PaymentId], [OrderId], [BuyerId], [PaymentSource], [PayerId], [PaymentCodeId], [TotalAmount], [DateTimeCreated]) VALUES (N'9d0647aa-67c4-4d7b-92c5-27cdf5985aec', N'ecd50490-0e2a-42b7-b96c-3b81589423fa', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'Cash on delivery', N'25REXAAABNLML', N'uY2THRdIT4pB2rIQD', 10, CAST(N'2024-11-23T09:46:06.683' AS DateTime))
+GO
+INSERT [dbo].[Payment] ([PaymentId], [OrderId], [BuyerId], [PaymentSource], [PayerId], [PaymentCodeId], [TotalAmount], [DateTimeCreated]) VALUES (N'0c9e3a9d-1486-4260-953c-4e5758d31758', N'3a7c12ce-f2ed-4c81-8815-297f6b016a61', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'paypal', N'25REXAAABNLML', N'935715080S9956433', 72, CAST(N'2024-11-23T09:44:47.393' AS DateTime))
+GO
+INSERT [dbo].[Payment] ([PaymentId], [OrderId], [BuyerId], [PaymentSource], [PayerId], [PaymentCodeId], [TotalAmount], [DateTimeCreated]) VALUES (N'2b2b292c-af5b-4a87-914e-7f1a2dadfc49', N'4cf08edf-73e2-4b63-b742-31eee2060b9d', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'paypal', N'25REXAAABNLML', N'935715080S9956433', 40, CAST(N'2024-11-23T09:44:47.410' AS DateTime))
+GO
+INSERT [dbo].[Payment] ([PaymentId], [OrderId], [BuyerId], [PaymentSource], [PayerId], [PaymentCodeId], [TotalAmount], [DateTimeCreated]) VALUES (N'665030ca-c32c-4ffe-b7db-e4f21982e54c', N'e477ab08-962b-4d5f-baee-83657658139f', N'e93c37cd-0975-4ff7-9770-3168b33c42b5', N'paypal', N'25REXAAABNLML', N'51S50136VV9730721', 40, CAST(N'2024-11-23T09:53:31.467' AS DateTime))
+GO
+INSERT [dbo].[ProductReference] ([ProductReferenceId], [ProductName], [Price], [ProductImage], [CategoryName], [DateTimeCreated]) VALUES (N'70355f76-b7bb-4a73-8687-4dc67faf0c64', N'Apple', 20, N'70355f76-b7bb-4a73-8687-4dc67faf0c64.png', N'Fruits', CAST(N'2024-11-25T16:26:32.767' AS DateTime))
+GO
+INSERT [dbo].[ProductReference] ([ProductReferenceId], [ProductName], [Price], [ProductImage], [CategoryName], [DateTimeCreated]) VALUES (N'79af8a09-e7c4-4ab1-857e-9533870100ff', N'Cabbage', 20, N'79af8a09-e7c4-4ab1-857e-9533870100ff.png', N'Vegetables', CAST(N'2024-11-25T16:08:57.817' AS DateTime))
+GO
+INSERT [dbo].[ProductReference] ([ProductReferenceId], [ProductName], [Price], [ProductImage], [CategoryName], [DateTimeCreated]) VALUES (N'00643fbe-5fa4-43eb-9ad8-d35ab4eb2427', N'Hello', 10, N'00643fbe-5fa4-43eb-9ad8-d35ab4eb2427.png', N'Fruits', CAST(N'2024-11-25T16:31:58.930' AS DateTime))
+GO
+INSERT [dbo].[ProductReference] ([ProductReferenceId], [ProductName], [Price], [ProductImage], [CategoryName], [DateTimeCreated]) VALUES (N'13d3824e-68a8-4e19-963d-d6cbfdf5b517', N'Okra', 20, N'13d3824e-68a8-4e19-963d-d6cbfdf5b517.png', N'Vegetables', CAST(N'2024-11-25T16:15:44.643' AS DateTime))
+GO
+INSERT [dbo].[ProductReference] ([ProductReferenceId], [ProductName], [Price], [ProductImage], [CategoryName], [DateTimeCreated]) VALUES (N'cbacc1a7-8c37-43e0-9107-e77f24e3c71e', N'Bombay', 20, N'cbacc1a7-8c37-43e0-9107-e77f24e3c71e.png', N'Vegetables', CAST(N'2024-11-25T15:16:49.480' AS DateTime))
+GO

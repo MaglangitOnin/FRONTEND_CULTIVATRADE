@@ -1,0 +1,2 @@
+EMAIL: sb-6zj9k26796335@personal.example.com
+PASSWORD: 12345678
